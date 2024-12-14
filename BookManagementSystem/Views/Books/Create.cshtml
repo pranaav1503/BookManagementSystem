@@ -1,0 +1,54 @@
+﻿@model BookManagementSystem.Models.Book
+
+<div class="row">
+    <h2>Add New Book</h2>
+    <div class="col-md-4">
+
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="Title">Title:</label>
+                <input type="text" name="Title" id="Title" class="form-control" asp-for="Title" placeholder="Enter book title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Author">Author:</label>
+                <input type="text" name="Author" id="Author" class="form-control" asp-for="Author" placeholder="Enter author name" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Genre">Genre:</label>
+                <input type="text" name="Genre" id="Genre" class="form-control" asp-for="Genre" placeholder="Enter genre" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="PublishedYear">Published Year:</label>
+                <input type="number" name="PublishedYear" id="PublishedYear" class="form-control" asp-for="PublishedYear" placeholder="Enter published year" />
+                <span asp-validation-for="PublishedYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="Price">Price:</label>
+                <input type="text" name="Price" id="Price" class="form-control" asp-for="Price" placeholder="Enter price" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="DiscountPercentage">Discount Percentage:</label>
+                <input type="number" name="DiscountPercentage" id="DiscountPercentage" class="form-control" asp-for="DiscountPercentage" placeholder="Enter discount percentage" />
+                <span asp-validation-for="DiscountPercentage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="ImageUrl">Cover Image:</label>
+                <input type="file" name="ImageFile" id="ImageFile" class="form-control" />
+
+            </div>
+
+            <div class="row p-4">
+                <div class="col-6 col-md-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a asp-action="Index" class="btn btn-secondary border">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
